@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Products page";
+}
+
+<h4>Products</h4>
+<hr />
+<p>
+    <a asp-page="/Products/Create">Create New</a>
+</p>
+@{
+    TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
+}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Model</th>
+            <th scope="col">Price</th>
+            <th scope="col">Obsolete</th>
+            <th scope="col">Modified</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <th scope="row">@product.Name</th>
+                <td>@product.Model</td>
+                <td>@product.Price</td>
+                <td><input type="checkbox" checked=@product.Obsolete disabled></td>
+                @{
+                    var modifiedDateTime = product.ModifiedDate > DateTime.MinValue ? TimeZoneInfo.ConvertTimeFromUtc(product.ModifiedDate, cstZone).ToString("dd.MM.yyyy HH:mm:ss") : "N/A";
+                }
+                <td>@modifiedDateTime</td>
+                <td>
+                    <a class="btn btn-primary" asp-page="/Products/Edit" asp-route-id="@product.Id">Edit</a>
+                    <a class="btn btn-danger" asp-page="/Products/Delete" asp-route-id="@product.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

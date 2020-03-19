@@ -1,0 +1,38 @@
+﻿@page
+@model Dapper.Razor.Demo.Pages.Products.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h4>Do you want to delete Product?</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div class="form-group">
+                <label>Name</label>
+                <input asp-for="Product.Name" class="form-control" readonly="readonly" />
+            </div>
+            <div class="form-group">
+                <label>Model</label>
+                <input asp-for="Product.Model" class="form-control" readonly="readonly" />
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input asp-for="Product.Price" class="form-control" readonly="readonly" />
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="chkBoxDefaultDisabled" checked=@Model.Product.Obsolete disabled>
+                    <label class="custom-control-label" for="chkBoxDefaultDisabled">@Html.DisplayNameFor(model => model.Product.Obsolete)</label>
+                </div>
+            </div>
+            <input type="hidden" asp-for="Product.Id" />
+            <hr />
+            <div class="form-group">
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a asp-page="/Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>

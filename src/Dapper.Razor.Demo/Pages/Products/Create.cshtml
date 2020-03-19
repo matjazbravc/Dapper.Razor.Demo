@@ -1,0 +1,39 @@
+﻿@page
+@model Dapper.Razor.Demo.Pages.Products.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+<h4>New Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>Name</label>
+                <input asp-for="Product.Name" class="form-control" />
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Model</label>
+                <input asp-for="Product.Model" class="form-control" />
+                <span asp-validation-for="Product.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input asp-for="Product.Price" class="form-control" />
+                <span asp-validation-for="Product.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input asp-for="Product.Obsolete" class="custom-control-input" id="chkBoxDefault" />
+                    <label class="custom-control-label" for="chkBoxDefault">@Html.DisplayNameFor(model => model.Product.Obsolete)</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" /> |
+                <a asp-page="/Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
