@@ -1,4 +1,4 @@
-﻿using Custom.Configuration.Provider.Demo.Configuration;
+﻿using Dapper.Razor.Demo.Configuration;
 using Dapper.Razor.Demo.Models;
 using Dapper.Razore.Demo.Services.Repositories.Base;
 using Microsoft.Data.Sqlite;

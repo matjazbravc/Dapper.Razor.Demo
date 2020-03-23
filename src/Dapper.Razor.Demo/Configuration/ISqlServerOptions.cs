@@ -1,4 +1,4 @@
-﻿namespace Custom.Configuration.Provider.Demo.Configuration
+﻿namespace Dapper.Razor.Demo.Configuration
 {
     public interface ISqlServerOptions
     {
