@@ -330,7 +330,8 @@ This example demonstrate also the following functionalities:
 ## Tags & Technologies
 - [.NET 7.0](https://github.com/dotnet/core/blob/main/release-notes/7.0/7.0.3/7.0.3.md)
 - [ASP.NET Core 7.0](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-7.0?view=aspnetcore-7.0)
-- [SQLite](https://sqlite.org/index.html)
+- [ASP.NET Core Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio)
+- [Dapper](https://github.com/StackExchange/Dapper)
 
 ## Licence
 Licenced under [MIT](http://opensource.org/licenses/mit-license.php).
