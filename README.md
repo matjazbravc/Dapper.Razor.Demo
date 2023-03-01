@@ -332,6 +332,7 @@ This example demonstrate also the following functionalities:
 - [ASP.NET Core 7.0](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-7.0?view=aspnetcore-7.0)
 - [ASP.NET Core Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio)
 - [Dapper](https://github.com/StackExchange/Dapper)
+- [SQLite](https://sqlite.org/index.html)
 
 ## Licence
 Licenced under [MIT](http://opensource.org/licenses/mit-license.php).
